@@ -1,0 +1,29 @@
+{
+  "name": "queens-gambit",
+  "version": "0.0.0",
+  "description": "Serverless Backend for the Westworld Challenge. Created and hosted with Vercel Serverless Functions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alamocityhacks/queens-gambit.git"
+  },
+  "keywords": [
+    "serverless",
+    "vercel",
+    "hackathon",
+    "backend"
+  ],
+  "author": "Sarthak Mohanty <sarthaktexas@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/alamocityhacks/queens-gambit/issues"
+  },
+  "homepage": "https://github.com/alamocityhacks/queens-gambit#readme",
+  "dependencies": {
+    "airtable-plus": "^1.0.4",
+    "nanoid": "^3.1.20"
+  }
+}
