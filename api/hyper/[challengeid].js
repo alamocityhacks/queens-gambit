@@ -1,16 +1,16 @@
+var axios = require('axios');
 export default async (req, res) => {
   const {
     query: { challengeid, answer, groupid },
   } = req
-  var testFunction = require(`../../tests/challenge${challengeid}`);
-  // DEV
-    const data = '23432472374 23432794832 732 4239432 832948732 4923 4872394 9234 7';
-  // DEV
+  var testFunction = require(`../../lib/tests/challenge${challengeid}`);
+  let data = await axios.get(`https://ozark.alamocityhacks.com/api/input?challenge=${challengeid}&groupid=${groupid}`);
+  data = data.data.res.input
   let condition = await testFunction(answer, data);
   res.json({
     status: condition ? 200 : 406,
     res: {
-      status: condition ? 'Correct' : 'Incorrect',
+      status: condition ? true : false,
     },
     req: {
       groupid: groupid,
